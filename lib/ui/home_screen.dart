@@ -67,6 +67,20 @@ class _HomeScreenState extends State<HomeScreen> {
                   '+',
                   style: TextStyle(fontSize: 25),
                 )),
+            SizedBox(
+              height: 10,
+            ),
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: const Color.fromARGB(255, 94, 5, 153),
+                ),
+                onPressed: () {
+                  context.read<CounterBloc>().add(ResetPress());
+                },
+                child: Text(
+                  'Reset',
+                  style: TextStyle(fontSize: 25),
+                ))
           ]),
         ),
       ),
